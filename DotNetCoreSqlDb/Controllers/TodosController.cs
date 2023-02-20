@@ -24,16 +24,16 @@ namespace DotNetCoreSqlDb.Controllers
             var todos = new List<Todo>();
 
             // This allows the home page to load if migrations have not been run yet.
-            try
-            {
+            //try
+            //{
                 todos = await _context.Todo.ToListAsync();
-            }
+            //}
 
-            catch (Exception e)
+            //catch (Exception e)
 
-            {
-                return View(todos);
-            }
+            //{
+                //return View(todos);
+            //}
 
             return View(todos);
         }
